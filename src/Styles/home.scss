@@ -1,0 +1,143 @@
+.home {
+  height: 89%;
+  width: 98%;
+  border-radius: 3px;
+  display: flex;
+  // content
+  > .content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    > p {
+      font-size: 2.8em;
+      font-weight: 900;
+      color: #343434;
+      text-transform: capitalize;
+      font-family: playfair;
+      line-height: 40px;
+    }
+    > .google {
+      font-size: 5em;
+      font-weight: 700;
+      > .span1 {
+        color: #0f77cc;
+      }
+      > .span2 {
+        color: #eb1212;
+      }
+      > .span3 {
+        color: #f3a406;
+      }
+      > .span4 {
+        color: #0f77cc;
+      }
+      > .span5 {
+        color: #0e9422;
+      }
+      > .span6 {
+        color: #eb1212;
+      }
+    }
+    > .summary {
+      width: 100%;
+      color: #343434;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 20px;
+      font-family: playfair;
+    }
+    > .buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      > .box {
+        background-color: #343434;
+        width: 170px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin: 20px 0px 20px 0px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+      }
+      > .box1 {
+        background-color: #206029;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: #343434;
+        }
+      }
+      > .box2 {
+        background-color: #eb1212;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: #343434;
+        }
+      }
+    }
+  }
+  // Image
+  > .image {
+    width: 50%;
+    height: 100%;
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+// Responsive 1
+@media screen and (max-width: 769px) {
+  .home {
+    // content
+    > .content {
+      > p {
+        font-size: 1.6em;
+      }
+      > .google {
+        font-size: 3em;
+      }
+      > .summary {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+// Responsive 2
+@media screen and (max-width: 426px) {
+  .home {
+    flex-direction: column-reverse;
+    // content
+    > .content {
+      width: 100%;
+      gap: 5px;
+      > p {
+        font-size: 1.2em;
+      }
+      > .google {
+        font-size: 2.6em;
+      }
+      > .summary {
+        font-size: 1.3rem;
+      }
+    }
+    // Image
+    > .image {
+      width: 100%;
+    }
+  }
+}
